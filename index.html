@@ -3,2083 +3,335 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Darrin 'X' Frazier - 40+ years in Washington DC Go-Go culture. From stage crew to cultural architect, musician, producer, and digital innovator preserving and expanding Go-Go's legacy.">
+    <meta name="description" content="Darrin 'X' Frazier — 40+ years shaping Washington DC's Go-Go culture. Musician, producer, cultural architect, and digital innovator.">
     <meta name="author" content="Darrin X Frazier">
-    <meta name="theme-color" content="#00ff88">
-    <title>Darrin "X" Frazier - Go-Go Culture Architect</title>
+    <meta name="theme-color" content="#0a0a0a">
+    <title>Darrin "X" Frazier — Cultural Architect</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" as="style">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --dark: #0a0a0a;
-            --dark-card: #141414;
-            --accent: #00ff88;
-            --purple: #a855f7;
-            --cyan: #06b6d4;
-            --text: #e5e5e5;
-            --text-dim: #a3a3a3;
-        }
-
-        body {
-            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-            background: var(--dark);
-            color: var(--text);
-            line-height: 1.7;
-            overflow-x: hidden;
-            min-height: 100vh;
-        }
-
-        /* Prevent Flash of Unstyled Content */
-        html {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        /* Background */
-        .bg-grid {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                linear-gradient(90deg, rgba(168, 85, 247, 0.02) 1px, transparent 1px),
-                linear-gradient(rgba(168, 85, 247, 0.02) 1px, transparent 1px);
-            background-size: 50px 50px;
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        /* Container */
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(10, 10, 10, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0, 255, 136, 0.1);
-            transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-            padding: 0;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        nav.scrolled {
-            background: rgba(10, 10, 10, 0.95);
-            border-bottom-color: rgba(0, 255, 136, 0.2);
-            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
-                        0 0 20px rgba(0, 255, 136, 0.1);
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1.5rem 3rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: 'Barlow Condensed', 'Arial Narrow', 'Helvetica Condensed', 'Liberation Sans Narrow', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 700;
-            letter-spacing: 0.15em;
-            color: var(--accent);
-            text-transform: uppercase;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .logo:hover {
-            color: var(--cyan);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-links a {
-            color: var(--text-dim);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            position: relative;
-            transition: color 0.3s ease;
-            letter-spacing: 0.05em;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-links a.active {
-            color: var(--accent);
-        }
-
-        .nav-links a.active::after {
-            width: 100%;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--text);
-            font-size: 1.5rem;
-            cursor: pointer;
-            border-radius: 8px;
-            padding: 0.5rem;
-        }
-
-        /* Hero Intro */
-        .hero {
-            padding: 6rem 0 4rem;
-            text-align: center;
-        }
-
-        .hero-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin: 0 auto 2.5rem;
-            background: linear-gradient(135deg, var(--purple), var(--cyan));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.9rem;
-            color: var(--text-dim);
-            border: 3px solid rgba(255, 255, 255, 0.1);
-            overflow: hidden;
-            position: relative;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            transition: opacity 0.5s ease;
-        }
-
-        /* Show gradient background when image is hidden */
-        .hero-image:not(:has(img[style*="display: none"]))::before {
-            display: none;
-        }
-
-        h1 {
-            font-family: 'Barlow Condensed', 'Arial Narrow', 'Helvetica Condensed', 'Liberation Sans Narrow', sans-serif;
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-        }
-
-        .subtitle {
-            font-size: 1.3rem;
-            color: var(--text-dim);
-            margin-bottom: 2.5rem;
-            font-weight: 400;
-        }
-
-        .intro-text {
-            font-size: 1.15rem;
-            line-height: 1.8;
-            color: var(--text);
-            max-width: 700px;
-            margin: 0 auto 3rem;
-        }
-
-        /* Timeline Section */
-        .timeline-section {
-            padding: 4rem 0;
-        }
-
-        .section-title {
-            font-family: 'Barlow Condensed', 'Arial Narrow', 'Helvetica Condensed', 'Liberation Sans Narrow', sans-serif;
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 800;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-            letter-spacing: -0.01em;
-            text-align: center;
-        }
-
-        .section-intro {
-            text-align: center;
-            color: var(--text-dim);
-            font-size: 1.1rem;
-            margin-bottom: 4rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Timeline */
-        .timeline {
-            position: relative;
-            padding: 2rem 0;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(180deg, 
-                transparent 0%,
-                rgba(0, 255, 136, 0.5) 10%,
-                rgba(168, 85, 247, 0.5) 50%,
-                rgba(6, 182, 212, 0.5) 90%,
-                transparent 100%
-            );
-            transform: translateX(-50%);
-        }
-
-        .timeline-item {
-            margin-bottom: 5rem;
-            position: relative;
-        }
-
-        .timeline-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .timeline-content {
-            width: calc(50% - 40px);
-            background: var(--dark-card);
-            padding: 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            position: relative;
-            transition: all 0.4s ease;
-            border-radius: 16px;
-        }
-
-        .timeline-content:hover {
-            transform: translateY(-10px);
-            border-color: var(--accent);
-            box-shadow: 0 0 30px rgba(0, 255, 136, 0.6),
-                        0 20px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .timeline-item:nth-child(odd) .timeline-content {
-            margin-left: auto;
-            margin-right: 40px;
-        }
-
-        .timeline-item:nth-child(even) .timeline-content {
-            margin-right: auto;
-            margin-left: 40px;
-        }
-
-        .timeline-dot {
-            position: absolute;
-            top: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 20px;
-            height: 20px;
-            background: var(--accent);
-            border-radius: 50%;
-            border: 4px solid var(--dark);
-            z-index: 2;
-            box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
-        }
-
-        .timeline-year {
-            font-family: 'Barlow Condensed', 'Arial Narrow', 'Helvetica Condensed', 'Liberation Sans Narrow', sans-serif;
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-title {
-            font-family: 'Barlow Condensed', 'Arial Narrow', 'Helvetica Condensed', 'Liberation Sans Narrow', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-            letter-spacing: 0.02em;
-        }
-
-        .timeline-description {
-            color: var(--text-dim);
-            line-height: 1.7;
-            margin-bottom: 1rem;
-        }
-
-        .timeline-highlights {
-            list-style: none;
-            margin-top: 1.5rem;
-            padding-left: 0;
-        }
-
-        .timeline-highlights li {
-            color: var(--text-dim);
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-            font-size: 0.95rem;
-        }
-
-        .timeline-highlights li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-        }
-
-        /* Philosophy Section */
-        .philosophy-section {
-            padding: 6rem 0;
-            background: linear-gradient(180deg, var(--dark) 0%, var(--dark-card) 50%, var(--dark) 100%);
-        }
-
-        .philosophy-content {
-            max-width: 700px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .quote {
-            font-size: 1.5rem;
-            line-height: 1.7;
-            color: var(--text);
-            font-style: italic;
-            margin: 3rem 0;
-            padding: 0 2rem;
-            position: relative;
-        }
-
-        .quote::before {
-            content: '"';
-            font-size: 5rem;
-            position: absolute;
-            top: -2rem;
-            left: 0;
-            color: var(--accent);
-            opacity: 0.3;
-            font-family: 'Barlow Condensed', 'Arial Narrow', 'Helvetica Condensed', 'Liberation Sans Narrow', sans-serif;
-        }
-
-        .principles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .principle-card {
-            background: var(--dark);
-            padding: 2rem;
-            border-left: 3px solid var(--accent);
-            border-radius: 16px;
-            transition: all 0.4s ease;
-            border-radius: 16px;
-        }
-
-        .principle-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--accent);
-            box-shadow: 0 0 30px rgba(0, 255, 136, 0.6),
-                        0 20px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .principle-title {
-            font-family: 'Barlow Condensed', 'Arial Narrow', 'Helvetica Condensed', 'Liberation Sans Narrow', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 0.75rem;
-            letter-spacing: 0.05em;
-        }
-
-        .principle-text {
-            color: var(--text-dim);
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-
-        /* Current Work Section */
-        .current-section {
-            padding: 4rem 0;
-        }
-
-        .current-content {
-            background: var(--dark-card);
-            padding: 3rem;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .current-intro {
-            font-size: 1.15rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-            color: var(--text);
-        }
-
-        .services-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .service-item {
-            padding: 1.5rem;
-            background: var(--dark);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            text-align: center;
-            border-radius: 12px;
-            transition: all 0.4s ease;
-        }
-
-        .service-item:hover {
-            transform: translateY(-10px);
-            border-color: var(--accent);
-            box-shadow: 0 0 30px rgba(0, 255, 136, 0.6),
-                        0 20px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .service-item h4 {
-            font-family: 'Barlow Condensed', 'Arial Narrow', 'Helvetica Condensed', 'Liberation Sans Narrow', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-            letter-spacing: 0.05em;
-            color: var(--accent);
-        }
-
-        .service-item p {
-            color: var(--text-dim);
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            padding: 6rem 0;
-            text-align: center;
-        }
-
-        /* Create and Manage Section */
-        .create-manage-section {
-            padding: 6rem 0;
-            background: var(--dark-card);
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-
-        .project-item {
-            background: var(--dark);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            overflow: hidden;
-            border-radius: 16px;
-            transition: all 0.4s ease;
-        }
-
-        .project-item:hover {
-            transform: translateY(-10px);
-            border-color: var(--accent);
-            box-shadow: 0 0 30px rgba(0, 255, 136, 0.6),
-                        0 20px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .project-image {
-            width: 100%;
-            aspect-ratio: 16/9;
-            background: #1a1a1a;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-dim);
-            font-size: 0.95rem;
-            text-align: center;
-            padding: 0;
-            border-radius: 16px 16px 0 0;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .project-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            display: block;
-        }
-
-        .project-image span {
-            padding: 2rem;
-        }
-
-        .project-content {
-            padding: 2rem;
-        }
-
-        .project-title {
-            font-family: 'Barlow Condensed', 'Arial Narrow', 'Helvetica Condensed', 'Liberation Sans Narrow', sans-serif;
-            font-size: 1.6rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 1rem;
-            color: var(--accent);
-        }
-
-        .project-description {
-            color: var(--text-dim);
-            line-height: 1.7;
-            font-size: 1rem;
-        }
-
-        .contact-box {
-            background: var(--dark-card);
-            padding: 3rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .contact-title {
-            font-family: 'Barlow Condensed', 'Arial Narrow', 'Helvetica Condensed', 'Liberation Sans Narrow', sans-serif;
-            font-size: 2rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-        }
-
-        .contact-text {
-            color: var(--text-dim);
-            margin-bottom: 2rem;
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-
-        .contact-email {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: var(--accent);
-            color: var(--dark);
-            text-decoration: none;
-            font-family: 'Barlow Condensed', 'Arial Narrow', 'Helvetica Condensed', 'Liberation Sans Narrow', sans-serif;
-            font-weight: 700;
-            font-size: 1.1rem;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            border-radius: 50px;
-            transition: all 0.3s;
-            box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
-            border: none;
-            cursor: pointer;
-        }
-
-        .contact-email:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 30px rgba(0, 255, 136, 0.5);
-        }
-
-        /* Contact Form Modal */
-        .form-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(10px);
-            z-index: 2000;
-            overflow-y: auto;
-            padding: 2rem;
-            animation: fadeIn 0.3s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .form-modal.active {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .form-modal-content {
-            background: var(--dark-card);
-            border: 1px solid rgba(0, 255, 136, 0.2);
-            border-radius: 20px;
-            padding: 3rem;
-            max-width: 600px;
-            width: 100%;
-            position: relative;
-            animation: slideUp 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
-            background: none;
-            border: none;
-            color: var(--text-dim);
-            font-size: 2rem;
-            cursor: pointer;
-            line-height: 1;
-            transition: color 0.3s ease;
-            padding: 0;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-        }
-
-        .close-modal:hover {
-            color: var(--accent);
-            background: rgba(0, 255, 136, 0.1);
-        }
-
-        .form-title {
-            font-family: 'Barlow Condensed', 'Arial Narrow', 'Helvetica Condensed', 'Liberation Sans Narrow', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-            color: var(--accent);
-        }
-
-        .form-subtitle {
-            color: var(--text-dim);
-            margin-bottom: 2rem;
-            font-size: 1rem;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--text);
-            font-size: 0.95rem;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            background: var(--dark);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            color: var(--text);
-            font-family: inherit;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(0, 255, 136, 0.1);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .form-submit {
-            width: 100%;
-            margin-top: 1rem;
-        }
-
-        .form-status {
-            margin-top: 1rem;
-            padding: 1rem;
-            border-radius: 12px;
-            text-align: center;
-            font-weight: 600;
-            display: none;
-        }
-
-        .form-status.success {
-            display: block;
-            background: rgba(0, 255, 136, 0.1);
-            border: 1px solid var(--accent);
-            color: var(--accent);
-        }
-
-        .form-status.error {
-            display: block;
-            background: rgba(255, 0, 0, 0.1);
-            border: 1px solid #ff0000;
-            color: #ff6666;
-        }
-
-        /* Footer */
-        footer {
-            padding: 3rem 0 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            text-align: center;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .social-links a {
-            color: var(--text-dim);
-            font-size: 1.5rem;
-            transition: all 0.3s;
-            text-decoration: none;
-        }
-
-        .social-links a:hover {
-            color: var(--accent);
-            transform: translateY(-3px);
-        }
-
-        .copyright {
-            color: var(--text-dim);
-            font-size: 0.9rem;
-        }
-
-        /* Divider */
-        .section-divider {
-            height: 1px;
-            background: linear-gradient(90deg, 
-                transparent 0%,
-                rgba(255, 255, 255, 0.1) 50%,
-                transparent 100%
-            );
-            margin: 4rem 0;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 1.5rem;
-            }
-
-            .nav-container {
-                padding: 1rem 1.5rem;
-            }
-
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: rgba(10, 10, 10, 0.98);
-                flex-direction: column;
-                gap: 0;
-                padding: 1rem 0;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-                border-radius: 0 0 16px 16px;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .nav-links li {
-                padding: 0;
-            }
-
-            .nav-links a {
-                display: block;
-                padding: 1rem 2rem;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            }
-
-            .nav-links a::after {
-                display: none;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .hero {
-                min-height: 70vh;
-                border-radius: 8px;
-                padding: 8rem 1.5rem 3rem;
-            }
-
-            .hero-image {
-                width: 150px;
-                height: 150px;
-                margin: 0 auto 1.5rem;
-            }
-
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            .subtitle {
-                font-size: 1.1rem;
-            }
-
-            .intro-text {
-                font-size: 1rem;
-            }
-
-            .timeline::before {
-                left: 20px;
-            }
-
-            .timeline-dot {
-                left: 20px;
-            }
-
-            .timeline-content {
-                width: calc(100% - 60px);
-                margin-left: 60px !important;
-                margin-right: 0 !important;
-            }
-
-            .timeline-item:nth-child(odd) .timeline-content,
-            .timeline-item:nth-child(even) .timeline-content {
-                margin-left: 60px;
-                margin-right: 0;
-            }
-
-            .quote {
-                font-size: 1.2rem;
-                padding: 0 1rem;
-            }
-
-            .principles-grid,
-            .services-list {
-                grid-template-columns: 1fr;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .current-content,
-            .contact-box {
-                padding: 2rem;
-            }
-            
-            .form-modal {
-                padding: 1rem;
-            }
-
-            .form-modal-content {
-                padding: 2rem 1.5rem;
-            }
-
-            .form-title {
-                font-size: 2rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .principle-card,
-            .service-item,
-            .project-item {
-                padding: 1.5rem;
-            }
-        }
-
-        /* Extra small devices */
-        @media (max-width: 480px) {
-            .hero-image {
-                width: 120px;
-                height: 120px;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            .subtitle {
-                font-size: 1rem;
-            }
-
-            .nav-container {
-                padding: 0.75rem 1rem;
-            }
-
-            .logo {
-                font-size: 1.1rem;
-            }
-
-            .container {
-                padding: 0 1rem;
-            }
-
-            .current-content,
-            .contact-box {
-                padding: 1.5rem;
-            }
-        }
-
-        /* Touch-friendly improvements */
-        @media (hover: none) and (pointer: coarse) {
-            .nav-links a,
-            .mobile-menu-btn,
-            button,
-            a {
-                min-height: 44px;
-                min-width: 44px;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .principle-card,
-            .service-item,
-            .project-item {
-                transition: transform 0.2s ease;
-            }
-
-            .principle-card:active,
-            .service-item:active,
-            .project-item:active {
-                transform: scale(0.98);
-            }
-        }
-
-        /* Scroll Animations */
-        .scroll-fade-in {
-            opacity: 0;
-            transform: translateY(60px);
-            transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-
-        .scroll-fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .scroll-scale-in {
-            opacity: 0;
-            transform: scale(0.8);
-            transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-
-        .scroll-scale-in.visible {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        /* Staggered Animation Delays */
-        .stagger-1 { transition-delay: 0.1s; }
-        .stagger-2 { transition-delay: 0.2s; }
-        .stagger-3 { transition-delay: 0.3s; }
-        .stagger-4 { transition-delay: 0.4s; }
-        .stagger-5 { transition-delay: 0.5s; }
-        .stagger-6 { transition-delay: 0.6s; }
-
-        /* Text Reveal Animation */
-        .text-reveal {
-            border-radius: 20px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .text-reveal span {
-            display: inline-block;
-            opacity: 0;
-            transform: translateY(100%);
-        }
-
-        .text-reveal.active span {
-            animation: revealText 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-        }
-
-        @keyframes revealText {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Parallax Effect for Background Elements */
-        .parallax-orb {
-            will-change: transform;
-            transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-
-        /* Timeline Dot Pulse Animation */
-        .timeline-dot {
-            position: absolute;
-            top: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 20px;
-            height: 20px;
-            background: var(--accent);
-            border-radius: 50%;
-            border: 4px solid var(--dark);
-            z-index: 2;
-            box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
-            animation: pulseDot 2s ease-in-out infinite;
-            transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-
-        .timeline-dot.visible {
-            opacity: 1 !important;
-            transform: translateX(-50%) scale(1) !important;
-        }
-
-        @keyframes pulseDot {
-            0%, 100% {
-                box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
-            }
-            50% {
-                box-shadow: 0 0 40px rgba(0, 255, 136, 1),
-                            0 0 60px rgba(0, 255, 136, 0.5);
-            }
-        }
-
-        /* Section Title Animation */
-        .section-title {
-            font-family: 'Barlow Condensed', 'Arial Narrow', 'Helvetica Condensed', 'Liberation Sans Narrow', sans-serif;
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 80px;
-            height: 4px;
-            background: var(--accent);
-            transform: translateX(-100%);
-            transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-
-        .section-title.visible::after {
-            transform: translateX(0);
-        }
-
-        /* Glitch Effect on Hero Title */
-        .glitch-text {
-            position: relative;
-            display: inline-block;
-        }
-
-        .glitch-text::before,
-        .glitch-text::after {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-        }
-
-        .glitch-text:hover::before {
-            animation: glitch-1 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-            color: var(--accent);
-            z-index: -1;
-        }
-
-        .glitch-text:hover::after {
-            animation: glitch-2 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-            color: var(--cyan);
-            z-index: -2;
-        }
-
-        @keyframes glitch-1 {
-            0%, 100% {
-                transform: translate(0);
-                opacity: 0;
-            }
-            33% {
-                transform: translate(-2px, 2px);
-                opacity: 0.8;
-            }
-            66% {
-                transform: translate(2px, -2px);
-                opacity: 0.8;
-            }
-        }
-
-        @keyframes glitch-2 {
-            0%, 100% {
-                transform: translate(0);
-                opacity: 0;
-            }
-            33% {
-                transform: translate(2px, -2px);
-                opacity: 0.6;
-            }
-            66% {
-                transform: translate(-2px, 2px);
-                opacity: 0.6;
-            }
-        }
-
-        /* Magnetic Button Effect */
-        .btn-primary {
-            padding: 1.2rem 2.5rem;
-            font-family: 'Barlow Condensed', 'Arial Narrow', 'Helvetica Condensed', 'Liberation Sans Narrow', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            border: none;
-            background: var(--accent);
-            color: var(--dark);
-            box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
-        }
-
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.5s;
-        }
-
-        .btn-primary:hover::before {
-            left: 100%;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 50px rgba(0, 255, 136, 0.6);
-        }
-
-        /* Quote Highlight Animation */
-        .quote {
-            font-size: 1.5rem;
-            line-height: 1.7;
-            color: var(--text);
-            font-style: italic;
-            margin: 3rem 0;
-            padding: 0 2rem;
-            position: relative;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-
-        .quote.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .quote::before {
-            content: '"';
-            font-size: 5rem;
-            position: absolute;
-            top: -2rem;
-            left: 0;
-            color: var(--accent);
-            opacity: 0.3;
-            font-family: 'Barlow Condensed', 'Arial Narrow', 'Helvetica Condensed', 'Liberation Sans Narrow', sans-serif;
-            animation: fadeInScale 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-        }
-
-        @keyframes fadeInScale {
-            from {
-                opacity: 0;
-                transform: scale(0.5) rotate(-10deg);
-            }
-            to {
-                opacity: 0.3;
-                transform: scale(1) rotate(0deg);
-            }
-        }
-
-        /* Card Entrance Animations */
-        .timeline-content,
-        .principle-card,
-        .service-item,
-        .project-item {
-            opacity: 0;
-            transform: translateY(40px);
-        }
-
-        .timeline-content.visible,
-        .principle-card.visible,
-        .service-item.visible,
-        .project-item.visible {
-            opacity: 1;
-            transform: translateY(0);
-            border-radius: 16px;
-            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-
-        /* Timeline Line Draw Animation */
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(180deg, 
-                transparent 0%,
-                rgba(0, 255, 136, 0.5) 10%,
-                rgba(168, 85, 247, 0.5) 50%,
-                rgba(6, 182, 212, 0.5) 90%,
-                transparent 100%
-            );
-            transform: translateX(-50%) scaleY(0);
-            transform-origin: top;
-            animation: drawLine 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-        }
-
-        @keyframes drawLine {
-            to {
-                transform: translateX(-50%) scaleY(1);
-            }
-        }
-
-        /* Floating Animation for Hero Image */
-        .hero-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin: 0 auto 2.5rem;
-            background: linear-gradient(135deg, var(--purple), var(--cyan));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.9rem;
-            color: var(--text-dim);
-            border: 3px solid rgba(255, 255, 255, 0.1);
-            animation: float 6s ease-in-out infinite;
-            overflow: hidden;
-            position: relative;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            transition: opacity 0.5s ease;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-
-        /* Contact Box Glow Pulse */
-        .contact-box {
-            background: var(--dark-card);
-            padding: 3rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            max-width: 600px;
-            margin: 0 auto;
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            animation: pulseGlow 3s ease-in-out infinite;
-        }
-
-        @keyframes pulseGlow {
-            0%, 100% {
-                box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
-            }
-            50% {
-                box-shadow: 0 0 40px rgba(0, 255, 136, 0.4);
-            }
-        }
-
-        /* Number Counter Animation */
-        @keyframes countUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .stat-number {
-            font-family: 'Barlow Condensed', 'Arial Narrow', 'Helvetica Condensed', 'Liberation Sans Narrow', sans-serif;
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: var(--accent);
-            line-height: 1;
-            margin-bottom: 0.5rem;
-            animation: countUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-        }
-
-        /* Eyebrow Line Slide In */
-        .eyebrow::before {
-            content: '';
-            position: absolute;
-            left: -60px;
-            top: 50%;
-            width: 50px;
-            height: 2px;
-            background: var(--accent);
-            transform: scaleX(0);
-            transform-origin: right;
-            animation: slideInLine 1s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
-        }
-
-        @keyframes slideInLine {
-            to {
-                transform: scaleX(1);
-            }
-        }
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        :root{
+            --bg:#060606;--bg2:#0e0e0e;--surface:#1a1a1a;
+            --border:rgba(255,255,255,0.09);--border-h:rgba(255,255,255,0.18);
+            --gold:#c8a44e;--gold-dim:rgba(200,164,78,0.15);--gold-glow:rgba(200,164,78,0.3);
+            --white:#f5f0e8;--dim:#c2b9ad;--muted:#958e85;
+            --serif:'Cormorant Garamond','Georgia',serif;
+            --sans:'Josefin Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+            --mono:'JetBrains Mono','Menlo',monospace;
+        }
+        html{scroll-behavior:smooth}
+        body{font-family:var(--sans);background:var(--bg);color:var(--white);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+        .grain{position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:256px}
+
+        /* NAV */
+        nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 0;transition:all .5s cubic-bezier(.16,1,.3,1)}
+        nav.scrolled{background:rgba(6,6,6,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);padding:1rem 0;border-bottom:1px solid var(--border)}
+        .nav-inner{max-width:1400px;margin:0 auto;padding:0 clamp(1.5rem,4vw,4rem);display:flex;justify-content:space-between;align-items:center}
+        .nav-brand{font-family:var(--mono);font-size:.75rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-decoration:none}
+        .nav-links{display:flex;gap:2.5rem;list-style:none}
+        .nav-links a{font-size:.8rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);text-decoration:none;transition:color .3s;position:relative}
+        .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--gold);transition:width .4s cubic-bezier(.16,1,.3,1)}
+        .nav-links a:hover{color:var(--white)}.nav-links a:hover::after{width:100%}
+        .nav-toggle{display:none;background:none;border:none;color:var(--white);cursor:pointer;width:28px;height:20px;position:relative}
+        .nav-toggle span{display:block;width:100%;height:1.5px;background:var(--white);position:absolute;left:0;transition:all .3s}
+        .nav-toggle span:nth-child(1){top:0}.nav-toggle span:nth-child(2){top:50%;transform:translateY(-50%)}.nav-toggle span:nth-child(3){bottom:0}
+        .nav-toggle.active span:nth-child(1){top:50%;transform:translateY(-50%) rotate(45deg)}.nav-toggle.active span:nth-child(2){opacity:0}.nav-toggle.active span:nth-child(3){bottom:50%;transform:translateY(50%) rotate(-45deg)}
+
+        /* HERO */
+        .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
+        .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 40%,rgba(200,164,78,.06) 0%,transparent 70%),radial-gradient(ellipse 60% 80% at 20% 80%,rgba(200,164,78,.03) 0%,transparent 60%)}
+        .hero-line{position:absolute;left:clamp(1.5rem,4vw,4rem);top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,var(--gold) 20%,var(--gold) 80%,transparent);opacity:.15}
+        .hero-inner{max-width:1400px;margin:0 auto;padding:0 clamp(1.5rem,4vw,4rem);width:100%;display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,8rem);align-items:center;position:relative;z-index:1}
+        .hero-content{padding:clamp(2rem,4vw,6rem) 0}
+        .hero-eyebrow{font-family:var(--mono);font-size:.7rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:flex;align-items:center;gap:1rem;opacity:0;transform:translateY(20px);animation:fadeUp 1.6s .5s cubic-bezier(.16,1,.3,1) forwards}
+        .hero-eyebrow::before{content:'';width:40px;height:1px;background:var(--gold)}
+        .hero-title{font-family:var(--serif);font-size:clamp(3.5rem,8vw,7.5rem);font-weight:700;line-height:.95;letter-spacing:-.03em;margin-bottom:2rem;opacity:0;transform:translateY(40px);animation:fadeUp 2s 1s cubic-bezier(.16,1,.3,1) forwards}
+        .hero-title em{font-style:italic;color:var(--gold)}
+        .hero-subtitle{font-size:clamp(1rem,1.5vw,1.2rem);font-weight:400;color:var(--dim);line-height:1.8;max-width:480px;margin-bottom:3rem;opacity:0;transform:translateY(30px);animation:fadeUp 1.8s 1.8s cubic-bezier(.16,1,.3,1) forwards}
+        .hero-stats{display:flex;gap:3rem;opacity:0;transform:translateY(20px);animation:fadeUp 1.6s 2.4s cubic-bezier(.16,1,.3,1) forwards}
+        .stat{display:flex;flex-direction:column}
+        .stat-number{font-family:var(--serif);font-size:3rem;font-weight:600;color:var(--gold);line-height:1}
+        .stat-label{font-size:.75rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.5rem}
+        .hero-portrait{position:relative;display:flex;justify-content:center;align-items:center;opacity:0;transform:translateY(40px) scale(.95);animation:fadeUp 2.2s .8s cubic-bezier(.16,1,.3,1) forwards}
+        .portrait-frame{position:relative;width:clamp(280px,28vw,420px);aspect-ratio:3/4;overflow:hidden}
+        .portrait-frame::before{content:'';position:absolute;inset:-1px;border:1px solid var(--gold);opacity:.25;z-index:2}
+        .portrait-frame img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:grayscale(20%) contrast(1.05)}
+        .portrait-accent{position:absolute;top:-20px;right:-20px;width:80px;height:80px;border:1px solid var(--gold);opacity:.2}
+        .portrait-tag{position:absolute;bottom:-10px;left:-10px;background:var(--gold);color:var(--bg);font-family:var(--mono);font-size:.65rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;padding:.6rem 1.2rem}
+        @keyframes fadeUp{to{opacity:1;transform:translateY(0) scale(1)}}
+
+        /* SCROLL REVEAL — gated by [data-sr] on body */
+        [data-sr] .sr{opacity:0;transform:translateY(40px);transition:opacity 3s cubic-bezier(.16,1,.3,1),transform 3s cubic-bezier(.16,1,.3,1)}
+        [data-sr] .sr.shown{opacity:1;transform:translateY(0)}
+        [data-sr] .sr-d1{transition-delay:.4s}[data-sr] .sr-d2{transition-delay:.8s}[data-sr] .sr-d3{transition-delay:1.2s}[data-sr] .sr-d4{transition-delay:1.6s}
+
+        /* ERA scroll reveal — also gated */
+        .era-dot,.era-year,.era-title,.era-text,.era-tags{transition:opacity 2.8s cubic-bezier(.16,1,.3,1),transform 2.8s cubic-bezier(.16,1,.3,1)}
+        .era-text{transition-delay:.5s}.era-tags{transition-delay:1s}
+        [data-sr] .era .era-dot{opacity:0;transform:scale(0)}
+        [data-sr] .era .era-year{opacity:0}
+        [data-sr] .era .era-title{opacity:0;transform:translateY(25px)}
+        [data-sr] .era .era-text{opacity:0;transform:translateY(30px)}
+        [data-sr] .era .era-tags{opacity:0;transform:translateY(20px)}
+        [data-sr] .era.shown .era-dot{opacity:1;transform:scale(1)}
+        [data-sr] .era.shown .era-year{opacity:1}
+        [data-sr] .era.shown .era-title{opacity:1;transform:translateY(0)}
+        [data-sr] .era.shown .era-text{opacity:1;transform:translateY(0)}
+        [data-sr] .era.shown .era-tags{opacity:1;transform:translateY(0)}
+
+        /* SECTIONS */
+        .section{padding:clamp(5rem,10vw,10rem) 0;position:relative}
+        .section-inner{max-width:1400px;margin:0 auto;padding:0 clamp(1.5rem,4vw,4rem)}
+        .section-header{margin-bottom:clamp(3rem,6vw,5rem)}
+        .section-eyebrow{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem}
+        .section-eyebrow::before{content:'';width:30px;height:1px;background:var(--gold)}
+        .section-heading{font-family:var(--serif);font-size:clamp(2.5rem,5.5vw,4.5rem);font-weight:600;line-height:1.1;letter-spacing:-.01em}
+        .section-heading em{font-style:italic;color:var(--gold)}
+        .section-desc{font-size:1.05rem;font-weight:400;color:var(--dim);line-height:1.8;max-width:600px;margin-top:1.5rem}
+
+        /* JOURNEY */
+        .journey-section{background:var(--bg)}
+        .timeline-track{position:relative;display:flex;flex-direction:column}
+        .timeline-track::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(200,164,78,.3) 10%,rgba(200,164,78,.3) 90%,transparent)}
+        .era{display:grid;grid-template-columns:auto 1fr;gap:0 clamp(2rem,4vw,4rem);padding:clamp(2.5rem,4vw,4rem) 0;border-bottom:1px solid var(--border);position:relative}
+        .era:last-child{border-bottom:none}
+        .era-marker{position:relative;display:flex;flex-direction:column;align-items:center;width:100px}
+        .era-body{max-width:700px}
+        .era-dot{width:9px;height:9px;border-radius:50%;background:var(--gold);position:relative;left:-50px;margin-left:.5px;flex-shrink:0;margin-top:.6rem;box-shadow:0 0 20px var(--gold-glow)}
+        .era-year{font-family:var(--mono);font-size:.7rem;font-weight:500;letter-spacing:.15em;color:var(--gold);white-space:nowrap;margin-top:1rem;position:relative;left:-10px}
+        .era-title{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:600;line-height:1.2;margin-bottom:1rem}
+        .era-text{font-weight:400;color:var(--dim);line-height:1.85;font-size:.95rem}
+        .era-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
+        .era-tag{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;padding:.45rem .9rem;border:1px solid rgba(255,255,255,.12);color:var(--dim);background:rgba(255,255,255,.04)}
+
+        /* PHILOSOPHY */
+        .philosophy-section{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+        .philosophy-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,8rem);align-items:start}
+        .philosophy-quote{font-family:var(--serif);font-size:clamp(1.4rem,2.5vw,2rem);font-weight:400;font-style:italic;line-height:1.7;color:var(--white);padding-left:2rem;border-left:2px solid var(--gold)}
+        .principles{display:flex;flex-direction:column;gap:2.5rem}
+        .principle{padding-bottom:2.5rem;border-bottom:1px solid var(--border)}.principle:last-child{border-bottom:none;padding-bottom:0}
+        .principle-num{font-family:var(--mono);font-size:.7rem;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:.75rem}
+        .principle-title{font-family:var(--serif);font-size:1.5rem;font-weight:600;margin-bottom:.75rem}
+        .principle-text{font-weight:400;color:var(--dim);line-height:1.7;font-size:.95rem}
+
+        /* EXPERTISE */
+        .expertise-section{background:var(--bg)}
+        .expertise-intro{font-size:1.1rem;font-weight:400;color:var(--dim);line-height:1.9;max-width:700px;margin-bottom:clamp(3rem,5vw,5rem)}
+        .expertise-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1px;background:var(--border);border:1px solid var(--border)}
+        .expertise-card{background:var(--bg);padding:clamp(1.5rem,3vw,2.5rem);transition:background .4s;position:relative}
+        .expertise-card::before{content:'';position:absolute;top:0;left:0;width:0;height:2px;background:var(--gold);transition:width .5s cubic-bezier(.16,1,.3,1)}
+        .expertise-card:hover{background:var(--bg2)}.expertise-card:hover::before{width:100%}
+        .expertise-card h4{font-family:var(--serif);font-size:1.25rem;font-weight:600;margin-bottom:.75rem}
+        .expertise-card p{font-weight:400;color:var(--dim);font-size:.92rem;line-height:1.7}
+
+        /* PROJECTS */
+        .projects-section{background:var(--bg2);border-top:1px solid var(--border)}
+        .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(1.5rem,3vw,2.5rem)}
+        .project-card{background:var(--bg);border:1px solid var(--border);overflow:hidden;transition:border-color .4s,box-shadow .4s;display:flex;flex-direction:column}
+        .project-card:hover{border-color:var(--border-h);box-shadow:0 20px 60px rgba(0,0,0,.4)}
+        .project-thumb{width:100%;aspect-ratio:16/9;overflow:hidden;background:var(--surface)}
+        .project-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+        .project-card:hover .project-thumb img{transform:scale(1.05)}
+        .project-body{padding:clamp(1.5rem,2.5vw,2rem);flex:1;display:flex;flex-direction:column}
+        .project-label{font-family:var(--mono);font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem}
+        .project-name{font-family:var(--serif);font-size:clamp(1.3rem,2vw,1.6rem);font-weight:600;margin-bottom:.75rem;line-height:1.2}
+        .project-desc{font-weight:400;color:var(--dim);font-size:.92rem;line-height:1.7;flex:1}
+
+        /* CONTACT */
+        .contact-section{background:var(--bg);border-top:1px solid var(--border)}
+        .contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,8rem);align-items:start}
+        .contact-cta{font-family:var(--serif);font-size:clamp(2.2rem,4.5vw,4rem);font-weight:600;line-height:1.15;margin-bottom:1.5rem}
+        .contact-cta em{font-style:italic;color:var(--gold)}
+        .contact-text{font-weight:400;color:var(--dim);line-height:1.8;font-size:1rem;margin-bottom:2.5rem}
+        .btn-gold{display:inline-flex;align-items:center;gap:.75rem;padding:1rem 2.5rem;background:var(--gold);color:var(--bg);font-family:var(--mono);font-size:.75rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:all .4s cubic-bezier(.16,1,.3,1)}
+        .btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 30px var(--gold-glow)}
+        .btn-gold svg{width:14px;height:14px;transition:transform .3s}.btn-gold:hover svg{transform:translateX(4px)}
+        .contact-form{display:flex;flex-direction:column;gap:1.25rem}
+        .form-field{display:flex;flex-direction:column;gap:.5rem}
+        .form-field label{font-family:var(--mono);font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
+        .form-field input,.form-field textarea{background:var(--bg2);border:1px solid var(--border);padding:1rem 1.25rem;color:var(--white);font-family:var(--sans);font-size:.95rem;font-weight:400;transition:border-color .3s;outline:none}
+        .form-field input:focus,.form-field textarea:focus{border-color:var(--gold)}
+        .form-field textarea{resize:vertical;min-height:120px}
+        .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+        .form-status{padding:1rem;text-align:center;font-weight:500;font-size:.9rem;display:none}
+        .form-status.success{display:block;background:rgba(200,164,78,.1);border:1px solid var(--gold);color:var(--gold)}
+        .form-status.error{display:block;background:rgba(255,80,80,.1);border:1px solid #ff5050;color:#ff8080}
+
+        /* FOOTER */
+        footer{padding:3rem 0;border-top:1px solid var(--border)}
+        .footer-inner{max-width:1400px;margin:0 auto;padding:0 clamp(1.5rem,4vw,4rem);display:flex;justify-content:space-between;align-items:center}
+        .footer-copy{font-size:.8rem;color:var(--muted);font-weight:400}
+        .footer-socials{display:flex;gap:1.5rem}
+        .footer-socials a{font-family:var(--mono);font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);text-decoration:none;transition:color .3s}
+        .footer-socials a:hover{color:var(--gold)}
+
+        /* RESPONSIVE */
+        @media(max-width:1024px){
+            .hero-inner{grid-template-columns:1fr;text-align:center}.hero-subtitle{margin-left:auto;margin-right:auto}.hero-stats{justify-content:center}.hero-eyebrow{justify-content:center}.hero-portrait{order:-1;margin-bottom:2rem}.portrait-frame{width:clamp(200px,45vw,300px)}.portrait-accent{display:none}.portrait-tag{left:50%;transform:translateX(-50%);bottom:-12px}.philosophy-grid{grid-template-columns:1fr}.contact-layout{grid-template-columns:1fr}.projects-grid{grid-template-columns:1fr}
+        }
+        @media(max-width:768px){
+            .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(6,6,6,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);flex-direction:column;justify-content:center;align-items:center;gap:2rem;z-index:99}.nav-links.active{display:flex}.nav-links a{font-size:1.2rem;letter-spacing:.15em}.nav-toggle{display:block;z-index:101}.hero{min-height:auto;padding:8rem 0 4rem}.hero-line{display:none}.hero-stats{flex-wrap:wrap;gap:2rem}.era{grid-template-columns:1fr;gap:0;padding-left:2rem}.era-marker{width:auto;flex-direction:row;align-items:center;gap:1rem;margin-bottom:1rem}.era-dot{left:-2rem;margin-top:0;position:absolute}.era-year{left:0;margin-top:0}.timeline-track::before{left:0}.expertise-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.footer-inner{flex-direction:column;gap:1.5rem;text-align:center}
+        }
+        @media(max-width:480px){.portrait-frame{width:220px}.hero-stats{gap:1.5rem}.stat-number{font-size:2rem}}
+        @media(hover:none)and (pointer:coarse){.nav-links a,.btn-gold,button,a{min-height:44px}}
     </style>
-    <noscript>
-        <style>
-            .scroll-fade-in, .scroll-scale-in, .timeline-content, .principle-card, .service-item, .project-item {
-                opacity: 1 !important;
-                transform: none !important;
-            }
-        </style>
-    </noscript>
 </head>
 <body>
-    <div class="bg-grid"></div>
+    <div class="grain"></div>
+    <nav id="navbar"><div class="nav-inner"><a href="#" class="nav-brand">DXF</a><ul class="nav-links" id="navLinks"><li><a href="#home">Home</a></li><li><a href="#journey">Journey</a></li><li><a href="#philosophy">Philosophy</a></li><li><a href="#expertise">Expertise</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li></ul><button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
 
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">Darrin "X" Frazier</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#journey">The Journey</a></li>
-                <li><a href="#learned">What I've Learned</a></li>
-                <li><a href="#now">What I Do Now</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn">☰</button>
+    <section class="hero" id="home">
+        <div class="hero-bg"></div><div class="hero-line"></div>
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div class="hero-eyebrow">Washington, DC</div>
+                <h1 class="hero-title">Darrin<br><em>"X"</em><br>Frazier</h1>
+                <p class="hero-subtitle">Cultural architect, musician, producer, and digital innovator with 40+ years shaping Go-Go music from the stage to the screen.</p>
+                <div class="hero-stats">
+                    <div class="stat"><span class="stat-number">40+</span><span class="stat-label">Years in Go-Go</span></div>
+                    <div class="stat"><span class="stat-number">10+</span><span class="stat-label">Years w/ Rare Essence</span></div>
+                    <div class="stat"><span class="stat-number">5</span><span class="stat-label">Active Platforms</span></div>
+                </div>
+            </div>
+            <div class="hero-portrait"><div class="portrait-frame"><img src="IMG_7469b.jpg" alt="Darrin 'X' Frazier" loading="eager"></div><div class="portrait-accent"></div><div class="portrait-tag">Cultural Architect</div></div>
         </div>
-    </nav>
-
-    <!-- Hero Intro -->
-    <section class="hero container" id="home">
-        <div class="hero-image">
-            <img src="IMG_7469b.jpg" alt="Darrin 'X' Frazier" loading="eager">
-        </div>
-        <h1>Darrin "X" Frazier</h1>
-        <p class="subtitle">Go-Go Architect / Musician / Cultural Advocate</p>
-        <p class="intro-text">
-            A lifelong architect of Washington, DC's Go-Go culture, with over 40 years of hands-on experience shaping the music, the movement, and the community around it. From stage crew to keyboardist, producer to advocate—this is the story of how Go-Go became more than just music, and how one person helped carry its voice forward.
-        </p>
     </section>
 
-    <!-- Timeline Section -->
-    <section class="timeline-section container" id="journey">
-        <h2 class="section-title scroll-fade-in">The Journey</h2>
-        <p class="section-intro scroll-fade-in">
-            Every role taught me something essential. Every setback revealed a truth. Here's how it all unfolded.
-        </p>
-
-        <div class="timeline">
-            <!-- Early Years - Stage Crew -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-year">Early 1980s - 1991</div>
-                    <h3 class="timeline-title">The Beginning: Stage Crew to Technician</h3>
-                    <p class="timeline-description">
-                        It started with Experience Unlimited (EU) in the early '80s—stage crew work that offered a ground-level view of Go-Go at its absolute peak. By 1985, I was working as a stage technician for Rare Essence, learning the mechanics behind the magic, the technical foundations that made the music hit different.
-                    </p>
-                    <ul class="timeline-highlights">
-                        <li>Stage crew for Experience Unlimited during Go-Go's golden era</li>
-                        <li>Stage technician for Rare Essence starting in 1985</li>
-                        <li>Witnessed and supported Go-Go culture at its creative height</li>
-                        <li>Built deep understanding of technical production and live performance</li>
-                    </ul>
-                </div>
+    <section class="section journey-section" id="journey">
+        <div class="section-inner">
+            <div class="section-header sr"><div class="section-eyebrow">The Journey</div><h2 class="section-heading">Four Decades of<br><em>Shaping the Sound</em></h2><p class="section-desc">Every role taught me something essential. Every setback revealed a truth. Here's how it all unfolded.</p></div>
+            <div class="timeline-track">
+                <div class="era"><div class="era-marker"><div class="era-dot"></div><span class="era-year">1980s — 1991</span></div><div class="era-body"><h3 class="era-title">Stage Crew to Technician</h3><p class="era-text">It started with Experience Unlimited (EU) in the early '80s—stage crew work that offered a ground-level view of Go-Go at its absolute peak. By 1985, I was working as a stage technician for Rare Essence, learning the mechanics behind the magic, the technical foundations that made the music hit different.</p><div class="era-tags"><span class="era-tag">Experience Unlimited</span><span class="era-tag">Rare Essence</span><span class="era-tag">Stage Tech</span><span class="era-tag">Live Production</span></div></div></div>
+                <div class="era"><div class="era-marker"><div class="era-dot"></div><span class="era-year">1991 — 2000s</span></div><div class="era-body"><h3 class="era-title">Rare Essence Keyboardist</h3><p class="era-text">In 1991, I officially joined Rare Essence as a keyboardist—a role I held for over a decade. This wasn't just performing; it was creating. I earned production credits on some of the band's most influential 1990s records, helping shape the sound that defined an era.</p><div class="era-tags"><span class="era-tag">Work the Walls</span><span class="era-tag">Must Be Like That</span><span class="era-tag">Ah-Oh</span><span class="era-tag">Body Snatchers</span><span class="era-tag">Overnight Scenario</span></div></div></div>
+                <div class="era"><div class="era-marker"><div class="era-dot"></div><span class="era-year">2001</span></div><div class="era-body"><h3 class="era-title">The 911 Era</h3><p class="era-text">Continued the musical journey with the band 911, performing alongside Donnell Floyd at the legendary Chuck Brown Birthday Celebration Live at the 9:30 Club. This was about honoring the roots while pushing the culture forward.</p><div class="era-tags"><span class="era-tag">911</span><span class="era-tag">Donnell Floyd</span><span class="era-tag">9:30 Club</span><span class="era-tag">Chuck Brown Tribute</span></div></div></div>
+                <div class="era"><div class="era-marker"><div class="era-dot"></div><span class="era-year">2003 — 2011</span></div><div class="era-body"><h3 class="era-title">Curating the Bounce Beat</h3><p class="era-text">Partnered with Reginald "Polo" Burrell of TCB and entrepreneur Ben Abba to create and market the Bounce Beat sound—a Go-Go subgenre that sparked the "Beat Your Feet" dance movement. When Wale licensed TCB's "Bait" for his Ambition album through Warner Music Group in 2011, Go-Go reached new heights. I helped make that deal happen.</p><div class="era-tags"><span class="era-tag">Bounce Beat</span><span class="era-tag">Beat Your Feet</span><span class="era-tag">TCB</span><span class="era-tag">Wale × Warner</span></div></div></div>
+                <div class="era"><div class="era-marker"><div class="era-dot"></div><span class="era-year">2015 — Present</span></div><div class="era-body"><h3 class="era-title">Cultural Architect &amp; Digital Innovator</h3><p class="era-text">Go-Go became more than music—it became a tool for connection and advocacy. Co-owner of Go-GoRoyalty.com, I've expanded the culture's reach globally. Through collaborations with Moechella founder Yaddiya and the "Don't Mute DC" movement, I helped position Go-Go as a unifying force. Instrumental in opening the Go-Go Museum and Cafe, I worked with Monumental Sports on the Capital City Go-Go naming, secured COVID-19 relief for Go-Go bands, and now pioneer 360° virtual experiences, digital archiving, and AI for Go-Go culture.</p><div class="era-tags"><span class="era-tag">Don't Mute DC</span><span class="era-tag">Moechella</span><span class="era-tag">Go-Go Museum</span><span class="era-tag">360° VR</span><span class="era-tag">AI Innovation</span><span class="era-tag">COVID Relief</span></div></div></div>
             </div>
+        </div>
+    </section>
 
-            <!-- Rare Essence Keyboardist -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-year">1991 - 2000s</div>
-                    <h3 class="timeline-title">On Stage: Rare Essence Keyboardist</h3>
-                    <p class="timeline-description">
-                        In 1991, I officially joined Rare Essence as a keyboardist—a role I held for over a decade. This wasn't just performing; it was creating. I earned production credits on some of the band's most influential 1990s records, helping shape the sound that defined an era.
-                    </p>
-                    <ul class="timeline-highlights">
-                        <li>Keyboardist for Rare Essence for over 10 years</li>
-                        <li>Production credits: Work the Walls, Must Be Like That, Ah-Oh</li>
-                        <li>Production credits: Body Snatchers, Overnight Scenario</li>
-                        <li>Contributed to the sound that defined 1990s Go-Go</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 911 and Chuck Brown Era -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-year">2001</div>
-                    <h3 class="timeline-title">The 911 Era: Honoring the Godfather</h3>
-                    <p class="timeline-description">
-                        Continued the musical journey with the band 911, performing alongside Donnell Floyd at the legendary Chuck Brown Birthday Celebration Live at the 9:30 Club. This was about honoring the roots while pushing the culture forward.
-                    </p>
-                    <ul class="timeline-highlights">
-                        <li>Performed with 911 alongside Donnell Floyd</li>
-                        <li>Featured at Chuck Brown Birthday Celebration at 9:30 Club</li>
-                        <li>Continued to advance Go-Go's musical evolution</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Bounce Beat Innovation -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-year">2003 - 2011</div>
-                    <h3 class="timeline-title">Innovation: Creating the Bounce Beat Movement</h3>
-                    <p class="timeline-description">
-                        Partnered with Reginald "Polo" Burrell of TCB and entrepreneur Ben Abba to create and market the Bounce Beat sound—a Go-Go subgenre that sparked the "Beat Your Feet" dance movement. When Wale licensed TCB's "Bait" for his Ambition album through Warner Music Group in 2011, Go-Go reached new heights. I helped make that deal happen.
-                    </p>
-                    <ul class="timeline-highlights">
-                        <li>Co-created the Bounce Beat subgenre with TCB and Ben Abba</li>
-                        <li>Sparked the national "Beat Your Feet" dance movement</li>
-                        <li>Facilitated Wale's licensing of TCB's "Bait" for Warner Music Group</li>
-                        <li>Brought Go-Go to mainstream national attention</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Advocacy and Modern Era -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-year">2015 - Present</div>
-                    <h3 class="timeline-title">Cultural Architect: Advocacy & Innovation</h3>
-                    <p class="timeline-description">
-                        Go-Go became more than music—it became a tool for connection and advocacy. Co-owner of Go-GoRoyalty.com, a streaming platform for Go-Go music, I've worked to expand the culture's reach globally. Through collaborations with Moechella founder Yaddiya and the "Don't Mute DC" movement, I helped position Go-Go as a unifying force. Instrumental in helping the Go-Go Museum and Cafe get open, I reached out using my friendships and respect within the Go-Go community to secure representation and participation from musicians who helped elevate Go-Go music and its culture. I worked with Monumental Sports to support the Capital City Go-Go naming, and partnered with Councilmember Kenyan McDuffie to secure COVID-19 relief for Go-Go bands. Now pioneering Go-Go in 360° virtual experiences, digital archiving, and digital marketing—giving the culture an evolving voice that reaches far beyond DC.
-                    </p>
-                    <ul class="timeline-highlights">
-                        <li>Collaborated with Moechella and "Don't Mute DC" movement</li>
-                        <li>Instrumental in opening the Go-Go Museum and Cafe</li>
-                        <li>Leveraged community relationships to secure Go-Go representation</li>
-                        <li>Co-owner of Go-GoRoyalty.com 24/7 streaming platform</li>
-                        <li>Helped unify Go-Go community for Capital City Go-Go naming</li>
-                        <li>Secured COVID-19 relief funds for Go-Go bands in 2021</li>
-                        <li>Pioneering 360° experiences, digital archiving, digital marketing, and AI for Go-Go</li>
-                    </ul>
+    <section class="section philosophy-section" id="philosophy">
+        <div class="section-inner">
+            <div class="section-header sr"><div class="section-eyebrow">Philosophy</div><h2 class="section-heading">What I've <em>Learned</em></h2></div>
+            <div class="philosophy-grid">
+                <blockquote class="philosophy-quote sr">Forty years in Go-Go taught me this: you can't preserve culture from the outside looking in. You preserve it by living it, by showing up for the community when it matters, by using every connection you've built to open doors for the next generation.</blockquote>
+                <div class="principles">
+                    <div class="principle sr sr-d1"><div class="principle-num">01 — Principle</div><h4 class="principle-title">Culture is Living</h4><p class="principle-text">Go-Go survives because it adapts. From Bounce Beat to streaming platforms to digital marketing and AI—innovation doesn't dilute tradition, it extends it.</p></div>
+                    <div class="principle sr sr-d2"><div class="principle-num">02 — Principle</div><h4 class="principle-title">Community First</h4><p class="principle-text">Every move I've made—from "Don't Mute DC" to COVID relief—starts with the people. The bands, the fans, the city. They're the heartbeat.</p></div>
+                    <div class="principle sr sr-d3"><div class="principle-num">03 — Principle</div><h4 class="principle-title">Legacy Through Action</h4><p class="principle-text">40+ years in, I'm still building. Still connecting. Still making sure Go-Go's voice gets louder, not quieter. That's how you honor what came before.</p></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="container">
-        <div class="section-divider"></div>
-    </div>
-
-    <!-- Philosophy Section -->
-    <section class="philosophy-section" id="learned">
-        <div class="container">
-            <h2 class="section-title scroll-fade-in">What I've Learned</h2>
-            <div class="philosophy-content">
-                <p class="quote">
-                    Forty years in Go-Go taught me this: you can't preserve culture from the outside looking in. You preserve it by living it, by showing up for the community when it matters, by using every connection you've built to open doors for the next generation. From stage crew to the museum—it's all been about keeping Go-Go alive, relevant, and respected.
-                </p>
-                
-                <div class="principles-grid">
-                    <div class="principle-card">
-                        <h4 class="principle-title">Culture is Living</h4>
-                        <p class="principle-text">Go-Go survives because it adapts. From Bounce Beat to streaming platforms to digital marketing and AI—innovation doesn't dilute tradition, it extends it.</p>
-                    </div>
-                    <div class="principle-card">
-                        <h4 class="principle-title">Community First</h4>
-                        <p class="principle-text">Every move I've made—from "Don't Mute DC" to COVID relief—starts with the people. The bands, the fans, the city. They're the heartbeat.</p>
-                    </div>
-                    <div class="principle-card">
-                        <h4 class="principle-title">Legacy Through Action</h4>
-                        <p class="principle-text">40+ years in, I'm still building. Still connecting. Still making sure Go-Go's voice gets louder, not quieter. That's how you honor what came before.</p>
-                    </div>
-                </div>
+    <section class="section expertise-section" id="expertise">
+        <div class="section-inner">
+            <div class="section-header sr"><div class="section-eyebrow">Expertise</div><h2 class="section-heading">What I <em>Do Now</em></h2></div>
+            <p class="expertise-intro sr">Today, I work with artists, cultural organizations, and innovators who understand that Go-Go is more than a genre—it's a movement. My work spans music production, cultural advocacy, platform development, and strategic partnerships.</p>
+            <div class="expertise-grid">
+                <div class="expertise-card sr"><h4>Cultural Strategy</h4><p>Positioning Go-Go in new markets and platforms while protecting its authenticity and community roots.</p></div>
+                <div class="expertise-card sr sr-d1"><h4>Platform Development</h4><p>Building digital infrastructure like Go-GoRoyalty.com using web design and IT networking expertise.</p></div>
+                <div class="expertise-card sr sr-d2"><h4>Music Production</h4><p>Decades of production experience creating and shaping Go-Go's signature sound across eras.</p></div>
+                <div class="expertise-card sr sr-d3"><h4>Business Administration</h4><p>Music business expertise for contracts, rights management, licensing, and revenue optimization.</p></div>
+                <div class="expertise-card sr"><h4>Community Advocacy</h4><p>From "Don't Mute DC" to the Go-Go Museum—securing resources and representation for the culture.</p></div>
+                <div class="expertise-card sr sr-d1"><h4>Partnership Facilitation</h4><p>Connecting Go-Go with brands, sports teams, and institutions for meaningful collaborations.</p></div>
+                <div class="expertise-card sr sr-d2"><h4>Technical Infrastructure</h4><p>IT networking and broadcast engineering for streaming platforms, digital archives, and virtual experiences.</p></div>
+                <div class="expertise-card sr sr-d3"><h4>Digital Innovation</h4><p>Pioneering Go-Go in 360° experiences, digital marketing, AI, and emerging technologies.</p></div>
             </div>
         </div>
     </section>
 
-    <div class="container">
-        <div class="section-divider"></div>
-    </div>
-
-    <!-- Current Work -->
-    <section class="current-section container" id="now">
-        <h2 class="section-title scroll-fade-in">What I Do Now</h2>
-        <div class="current-content scroll-scale-in">
-            <p class="current-intro">
-                Today, I work with artists, cultural organizations, and innovators who understand that Go-Go is more than a genre—it's a movement. My work spans music production, cultural advocacy, platform development, and strategic partnerships. With expertise in IT networking, web design, and music business administration, I bridge the technical and creative worlds to build sustainable infrastructure for Go-Go culture. Here's how I help:
-            </p>
-
-            <div class="services-list">
-                <div class="service-item">
-                    <h4>Cultural Strategy</h4>
-                    <p>Positioning Go-Go in new markets and platforms while protecting its authenticity</p>
-                </div>
-                <div class="service-item">
-                    <h4>Platform Development</h4>
-                    <p>Building digital infrastructure like Go-GoRoyalty.com using web design and IT networking expertise</p>
-                </div>
-                <div class="service-item">
-                    <h4>Music Production</h4>
-                    <p>Decades of production experience creating Go-Go's signature sound</p>
-                </div>
-                <div class="service-item">
-                    <h4>Business Administration</h4>
-                    <p>Music business administration expertise for contracts, rights management, and revenue optimization</p>
-                </div>
-                <div class="service-item">
-                    <h4>Community Advocacy</h4>
-                    <p>From "Don't Mute DC" to the Go-Go Museum and Cafe—securing resources and representation for the culture</p>
-                </div>
-                <div class="service-item">
-                    <h4>Partnership Facilitation</h4>
-                    <p>Connecting Go-Go with brands, sports teams, and institutions for meaningful collaborations</p>
-                </div>
-                <div class="service-item">
-                    <h4>Technical Infrastructure</h4>
-                    <p>IT networking solutions for streaming platforms, digital archives, and virtual experiences</p>
-                </div>
-                <div class="service-item">
-                    <h4>Digital Innovation</h4>
-                    <p>Pioneering Go-Go in 360° experiences, digital marketing, AI, and emerging technologies</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="container">
-        <div class="section-divider"></div>
-    </div>
-
-    <!-- What I Create and Manage -->
-    <section class="create-manage-section" id="projects">
-        <div class="container">
-            <h2 class="section-title scroll-fade-in">What I Create and Manage</h2>
-            <p class="section-intro scroll-fade-in">
-                Platforms, initiatives, and projects that give Go-Go culture a voice, a home, and a future.
-            </p>
-
+    <section class="section projects-section" id="projects">
+        <div class="section-inner">
+            <div class="section-header sr"><div class="section-eyebrow">Portfolio</div><h2 class="section-heading">What I Create<br>&amp; <em>Manage</em></h2><p class="section-desc">Platforms, initiatives, and projects that give Go-Go culture a voice, a home, and a future.</p></div>
             <div class="projects-grid">
-                <div class="project-item">
-                    <div class="project-image">
-                        <!-- Replace YOUR_DROPBOX_LINK_1 with your actual Dropbox link -->
-                        <!-- Use the direct download link format: https://dl.dropboxusercontent.com/... -->
-                        <!-- Or use ?raw=1 at the end of regular Dropbox links -->
-                        <img src="Royalty.png" alt="Go-Go Royalty">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Go-Go Royalty</h3>
-                        <p class="project-description">
-                            24/7 streaming platform dedicated to Go-Go music. Co-owner and operator, providing global access to DC's homegrown sound with live streams, archived performances, and cultural programming.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="project-item">
-                    <div class="project-image">
-                        <img src="brmg.png" alt="Beat Republic Media Group">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Beat Republic Media Group</h3>
-                        <p class="project-description">
-                            Culture-driven brand and business strategy agency. Helping artists and cultural brands execute their vision through strategic planning, platform development, and authentic storytelling.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="project-item">
-                    <div class="project-image">
-                        <img src="GoGo Museum (2).png" alt="Go-Go Museum & Cafe">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Go-Go Museum & Cafe</h3>
-                        <p class="project-description">
-                            Instrumental in opening DC's first dedicated Go-Go museum. Leveraged community relationships to secure artist representation and participation, preserving the culture's history and legacy.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="project-item">
-                    <div class="project-image">
-                        <img src="the bunch.png" alt="Digital Archiving Initiative">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Digital Initiatives and Archiving</h3>
-                        <p class="project-description">
-                            I'm a digital innovator dedicated to amplifying Go-Go culture for a new era. My passion project is a suite of platforms: Go-Go VR for immersive concerts, GoGo DB as the genre's AI historian, Go-Go Maps for navigating the scene, and Crankington, DC for wearable culture. Together, they use technology to archive, connect, and celebrate the sound of DC.
-                        </p>
-                    </div>
-                </div>
+                <div class="project-card sr sr-d1"><div class="project-thumb"><img src="Royalty.png" alt="Go-Go Royalty"></div><div class="project-body"><div class="project-label">Streaming Platform</div><h3 class="project-name">Go-Go Royalty</h3><p class="project-desc">24/7 streaming platform dedicated to Go-Go music. Co-owner and operator, providing global access to DC's homegrown sound with live streams, archived performances, and cultural programming.</p></div></div>
+                <div class="project-card sr sr-d2"><div class="project-thumb"><img src="brmg.png" alt="Beat Republic Media Group"></div><div class="project-body"><div class="project-label">Agency</div><h3 class="project-name">Beat Republic Media Group</h3><p class="project-desc">Culture-driven brand and business strategy agency. Helping artists and cultural brands execute their vision through strategic planning, platform development, and authentic storytelling.</p></div></div>
+                <div class="project-card sr sr-d3"><div class="project-thumb"><img src="GoGo Museum (2).png" alt="Go-Go Museum &amp; Cafe"></div><div class="project-body"><div class="project-label">Cultural Landmark</div><h3 class="project-name">Go-Go Museum &amp; Cafe</h3><p class="project-desc">Instrumental in opening DC's first dedicated Go-Go museum. Leveraged community relationships to secure artist representation and participation, preserving the culture's history and legacy.</p></div></div>
+                <div class="project-card sr sr-d4"><div class="project-thumb"><img src="the bunch.png" alt="Digital Initiatives"></div><div class="project-body"><div class="project-label">Digital Suite</div><h3 class="project-name">Digital Initiatives &amp; Archiving</h3><p class="project-desc">A suite of platforms: Go-Go VR for immersive concerts, GoGo DB as the genre's AI historian, Go-Go Maps for navigating the scene, and Crankington DC for wearable culture.</p></div></div>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section class="contact-section container" id="contact">
-        <div class="contact-box scroll-scale-in">
-            <h2 class="contact-title">Let's Connect</h2>
-            <p class="contact-text">
-                If you're working to elevate Go-Go culture, build platforms for authentic voices, or create partnerships that honor the music and the community—let's talk.
-            </p>
-            <button class="contact-email" id="openFormBtn">Get In Touch</button>
-        </div>
-    </section>
-
-    <!-- Contact Form Modal -->
-    <div class="form-modal" id="contactModal">
-        <div class="form-modal-content">
-            <button class="close-modal" id="closeModalBtn">&times;</button>
-            <h2 class="form-title">Get In Touch</h2>
-            <p class="form-subtitle">Let's talk about Go-Go culture and collaboration</p>
-            
-            <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                <div class="form-group">
-                    <label for="name">Your Name *</label>
-                    <input type="text" id="name" name="name" required placeholder="John Doe">
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Your Email *</label>
-                    <input type="email" id="email" name="email" required placeholder="you@example.com">
-                </div>
-                
-                <div class="form-group">
-                    <label for="subject">Subject *</label>
-                    <input type="text" id="subject" name="subject" required placeholder="Go-Go Culture Collaboration">
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Message *</label>
-                    <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project or how we can collaborate..."></textarea>
-                </div>
-                
-                <button type="submit" class="btn-primary form-submit">Send Message</button>
+    <section class="section contact-section" id="contact">
+        <div class="section-inner"><div class="contact-layout">
+            <div class="sr"><div class="section-eyebrow">Get in Touch</div><h2 class="contact-cta">Let's Build<br>Something <em>Together</em></h2><p class="contact-text">If you're working to elevate Go-Go culture, build platforms for authentic voices, or create partnerships that honor the music and the community—let's talk.</p><a href="mailto:DX1228@gmail.com" class="btn-gold">Send Email <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
+            <form class="contact-form sr sr-d2" id="contactForm" action="https://formspree.io/f/xkgrkepz" method="POST">
+                <div class="form-row"><div class="form-field"><label for="name">Name</label><input type="text" id="name" name="name" required placeholder="Your name"></div><div class="form-field"><label for="email">Email</label><input type="email" id="email" name="email" required placeholder="you@email.com"></div></div>
+                <div class="form-field"><label for="subject">Subject</label><input type="text" id="subject" name="subject" required placeholder="What's this about?"></div>
+                <div class="form-field"><label for="message">Message</label><textarea id="message" name="message" rows="5" required placeholder="Tell me about your project or collaboration idea..."></textarea></div>
+                <button type="submit" class="btn-gold" style="align-self:flex-start">Send Message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
                 <div class="form-status" id="formStatus"></div>
             </form>
-        </div>
-    </div>
+        </div></div>
+    </section>
 
-    <!-- Footer -->
-    <footer class="container">
-        <div class="social-links">
-            <a href="https://www.instagram.com/mrx1time/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📸</a>
-            <a href="https://x.com/X_Mr202" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X">𝕏</a>
-            <a href="/cdn-cgi/l/email-protection#6c28345d5e5e542c0b010d0500420f0301" aria-label="Email">✉️</a>
-        </div>
-        <div class="copyright">
-            © 2025 Darrin "X" Frazier. All rights reserved.
-        </div>
-    </footer>
+    <footer><div class="footer-inner sr"><div class="footer-copy">&copy; 2025 Darrin "X" Frazier. All rights reserved.</div><div class="footer-socials"><a href="https://www.instagram.com/mrx1time/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://x.com/X_Mr202" target="_blank" rel="noopener noreferrer">X / Twitter</a><a href="mailto:DX1228@gmail.com">Email</a></div></div></footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        // Wait for DOM to be fully loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            
-        // Advanced Intersection Observer for Scroll Animations
-        const observerOptions = {
-            threshold: 0.15,
-            rootMargin: '0px 0px -100px 0px'
-        };
+    <script>
+    document.addEventListener('DOMContentLoaded',function(){
+        // Activate scroll-reveal hiding via CSS attribute gate
+        document.body.setAttribute('data-sr','');
 
-        const scrollObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+        // Collect all animated elements
+        var items=document.querySelectorAll('.sr,.era');
+        var arr=[];
+        for(var i=0;i<items.length;i++) arr.push(items[i]);
+
+        function check(){
+            var h=window.innerHeight;
+            for(var i=arr.length-1;i>=0;i--){
+                var r=arr[i].getBoundingClientRect();
+                if(r.top<h-30){
+                    arr[i].classList.add('shown');
+                    arr.splice(i,1);
                 }
-            });
-        }, observerOptions);
-
-        // Observe all animated elements (consolidated query)
-        const animatedElements = document.querySelectorAll('.scroll-fade-in, .scroll-scale-in, .timeline-content, .principle-card, .service-item, .project-item, .section-title, .quote');
-        animatedElements.forEach(el => scrollObserver.observe(el));
-
-        // Optimized Parallax Effect for Gradient Orbs
-        const orb1 = document.querySelector('.orb-1');
-        const orb2 = document.querySelector('.orb-2');
-        
-        if (orb1 && orb2) {
-            let ticking = false;
-            
-            window.addEventListener('scroll', () => {
-                if (!ticking) {
-                    window.requestAnimationFrame(() => {
-                        const scrolled = window.pageYOffset;
-                        orb1.style.transform = `translate(${scrolled * 0.1}px, ${scrolled * 0.15}px)`;
-                        orb2.style.transform = `translate(${-scrolled * 0.08}px, ${-scrolled * 0.12}px)`;
-                        ticking = false;
-                    });
-                    ticking = true;
-                }
-            });
-        }
-
-        // Text Reveal Animation for Hero Title
-        const heroTitle = document.querySelector('h1');
-        if (heroTitle) {
-            const text = heroTitle.textContent;
-            heroTitle.innerHTML = '';
-            heroTitle.classList.add('text-reveal');
-            
-            const lines = text.split('\n').filter(line => line.trim());
-            lines.forEach((line, lineIndex) => {
-                const lineSpan = document.createElement('span');
-                lineSpan.style.display = 'block';
-                
-                line.trim().split('').forEach((char, charIndex) => {
-                    const span = document.createElement('span');
-                    span.textContent = char === ' ' ? '\u00A0' : char;
-                    span.style.animationDelay = `${(lineIndex * 0.3) + (charIndex * 0.03)}s`;
-                    lineSpan.appendChild(span);
-                });
-                
-                heroTitle.appendChild(lineSpan);
-            });
-            
-            setTimeout(() => {
-                heroTitle.classList.add('active');
-            }, 300);
-        }
-
-        // Glitch Effect Data Attribute for gradient text
-        const gradientText = document.querySelector('.gradient-text');
-        if (gradientText) {
-            gradientText.classList.add('glitch-text');
-            gradientText.setAttribute('data-text', gradientText.textContent);
-        }
-
-        // Magnetic Button Effect (optimized)
-        const magneticButtons = document.querySelectorAll('.btn-primary, .contact-email');
-        magneticButtons.forEach(button => {
-            button.addEventListener('mousemove', (e) => {
-                const rect = button.getBoundingClientRect();
-                const x = (e.clientX - rect.left - rect.width / 2) * 0.2;
-                const y = (e.clientY - rect.top - rect.height / 2) * 0.2;
-                button.style.transform = `translate(${x}px, ${y}px) scale(1.05)`;
-            });
-            
-            button.addEventListener('mouseleave', () => {
-                button.style.transform = '';
-            });
-        });
-
-        // Smooth Scroll with Easing
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                
-                // Skip if it's just a hash with no target
-                if (href === '#' || href === '#home') {
-                    if (href === '#home') {
-                        e.preventDefault();
-                        window.scrollTo({
-                            top: 0,
-                            behavior: 'smooth'
-                        });
-                    }
-                    return;
-                }
-                
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-                    const startPosition = window.pageYOffset;
-                    const distance = targetPosition - startPosition - 80; // Offset for fixed nav
-                    const duration = 1200;
-                    let start = null;
-                    
-                    function animation(currentTime) {
-                        if (start === null) start = currentTime;
-                        const timeElapsed = currentTime - start;
-                        const run = ease(timeElapsed, startPosition, distance, duration);
-                        window.scrollTo(0, run);
-                        if (timeElapsed < duration) requestAnimationFrame(animation);
-                    }
-                    
-                    function ease(t, b, c, d) {
-                        t /= d / 2;
-                        if (t < 1) return c / 2 * t * t * t + b;
-                        t -= 2;
-                        return c / 2 * (t * t * t + 2) + b;
-                    }
-                    
-                    requestAnimationFrame(animation);
-                }
-            });
-        });
-
-        // Timeline Dots Sequential Reveal
-        const timelineDots = document.querySelectorAll('.timeline-dot');
-        if (timelineDots.length > 0) {
-            timelineDots.forEach((dot, index) => {
-                dot.style.opacity = '0';
-                dot.style.transform = 'translateX(-50%) scale(0)';
-                dot.style.transition = 'all 0.6s cubic-bezier(0.22, 1, 0.36, 1)';
-                dot.style.transitionDelay = `${index * 0.2}s`;
-                scrollObserver.observe(dot);
-            });
-        }
-
-        // Staggered Card Animation
-        const cardGroups = document.querySelectorAll('.principles-grid, .services-list, .projects-grid');
-        cardGroups.forEach(group => {
-            const groupCards = group.querySelectorAll('.principle-card, .service-item, .project-item');
-            groupCards.forEach((card, index) => {
-                card.classList.add(`stagger-${(index % 6) + 1}`);
-            });
-        });
-
-        // Optimized Nav Scroll Effect with Active Highlighting
-        const navbar = document.getElementById('navbar');
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-links a');
-        
-        if (navbar && sections.length > 0 && navLinks.length > 0) {
-            let lastScroll = 0;
-            
-            window.addEventListener('scroll', () => {
-                const currentScroll = window.pageYOffset;
-                
-                // Update navbar appearance
-                navbar.classList.toggle('scrolled', currentScroll > 100);
-                
-                // Highlight active section (throttled)
-                if (Math.abs(currentScroll - lastScroll) > 50) {
-                    let current = '';
-                    sections.forEach(section => {
-                        const sectionTop = section.offsetTop;
-                        if (currentScroll >= sectionTop - 200) {
-                            current = section.getAttribute('id');
-                        }
-                    });
-                    
-                    navLinks.forEach(link => {
-                        link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
-                    });
-                    
-                    lastScroll = currentScroll;
-                }
-            });
-        }
-
-        // Mobile Menu Toggle (optimized)
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinksContainer = document.querySelector('.nav-links');
-        
-        if (mobileMenuBtn && navLinksContainer) {
-            const toggleMenu = (forceClose = false) => {
-                if (forceClose) {
-                    navLinksContainer.classList.remove('active');
-                    mobileMenuBtn.textContent = '☰';
-                } else {
-                    const isActive = navLinksContainer.classList.toggle('active');
-                    mobileMenuBtn.textContent = isActive ? '✕' : '☰';
-                }
-            };
-
-            mobileMenuBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                toggleMenu();
-            });
-
-            // Close menu when clicking links or outside
-            navLinksContainer.addEventListener('click', (e) => {
-                if (e.target.tagName === 'A') toggleMenu(true);
-            });
-            
-            document.addEventListener('click', (e) => {
-                if (!navbar.contains(e.target)) toggleMenu(true);
-            });
-        }
-
-        // Contact Form Modal
-        const openFormBtn = document.getElementById('openFormBtn');
-        const closeModalBtn = document.getElementById('closeModalBtn');
-        const contactModal = document.getElementById('contactModal');
-        const contactForm = document.getElementById('contactForm');
-        const formStatus = document.getElementById('formStatus');
-
-        if (openFormBtn && contactModal) {
-            openFormBtn.addEventListener('click', () => {
-                contactModal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
-        }
-
-        if (closeModalBtn && contactModal) {
-            closeModalBtn.addEventListener('click', () => {
-                contactModal.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        }
-
-        // Close modal on outside click
-        if (contactModal) {
-            contactModal.addEventListener('click', (e) => {
-                if (e.target === contactModal) {
-                    contactModal.classList.remove('active');
-                    document.body.style.overflow = '';
-                }
-            });
-        }
-
-        // Close modal on Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && contactModal && contactModal.classList.contains('active')) {
-                contactModal.classList.remove('active');
-                document.body.style.overflow = '';
             }
-        });
+            if(arr.length===0){
+                window.removeEventListener('scroll',check);
+                window.removeEventListener('resize',check);
+            }
+        }
+        check();
+        setTimeout(check,200);
+        setTimeout(check,600);
+        window.addEventListener('scroll',check,{passive:true});
+        window.addEventListener('resize',check,{passive:true});
 
-        // Handle Form Submission with Formspree
-        if (contactForm && formStatus) {
-            contactForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                
-                const submitBtn = contactForm.querySelector('.form-submit');
-                const originalText = submitBtn.textContent;
-                
-                // Show loading state
-                submitBtn.textContent = 'Sending...';
-                submitBtn.disabled = true;
-                formStatus.classList.remove('success', 'error');
-                formStatus.style.display = 'none';
-                
-                try {
-                    const formData = new FormData(contactForm);
-                    const response = await fetch(contactForm.action, {
-                        method: 'POST',
-                        body: formData,
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    });
-                    
-                    if (response.ok) {
-                        formStatus.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
-                        formStatus.classList.add('success');
-                        contactForm.reset();
-                        
-                        // Close modal after 2 seconds
-                        setTimeout(() => {
-                            contactModal.classList.remove('active');
-                            document.body.style.overflow = '';
-                            formStatus.style.display = 'none';
-                        }, 2000);
-                    } else {
-                        throw new Error('Form submission failed');
-                    }
-                } catch (error) {
-                    formStatus.textContent = '✗ Something went wrong. Please try again or email directly.';
-                    formStatus.classList.add('error');
-                }
-                
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-                formStatus.style.display = 'block';
+        // Nav scroll
+        var nav=document.getElementById('navbar');
+        window.addEventListener('scroll',function(){
+            nav.classList.toggle('scrolled',window.scrollY>80);
+        },{passive:true});
+
+        // Mobile menu
+        var tog=document.getElementById('navToggle'),lnk=document.getElementById('navLinks');
+        tog.addEventListener('click',function(){tog.classList.toggle('active');lnk.classList.toggle('active');document.body.style.overflow=lnk.classList.contains('active')?'hidden':''});
+        lnk.addEventListener('click',function(e){if(e.target.tagName==='A'){tog.classList.remove('active');lnk.classList.remove('active');document.body.style.overflow=''}});
+
+        // Smooth scroll
+        var anchors=document.querySelectorAll('a[href^="#"]');
+        for(var i=0;i<anchors.length;i++){
+            anchors[i].addEventListener('click',function(e){
+                var h=this.getAttribute('href');if(h==='#')return;e.preventDefault();
+                var t=document.querySelector(h);
+                if(t)window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'});
             });
         }
-        }); // Close DOMContentLoaded
+
+        // Contact form
+        var form=document.getElementById('contactForm'),st=document.getElementById('formStatus');
+        if(form)form.addEventListener('submit',function(e){
+            e.preventDefault();var btn=form.querySelector('button[type="submit"]');btn.textContent='Sending...';btn.disabled=true;st.className='form-status';st.style.display='none';
+            fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}}).then(function(r){
+                if(r.ok){st.textContent="Message sent — I'll be in touch soon.";st.classList.add('success');form.reset()}else throw 0;
+            }).catch(function(){st.textContent='Something went wrong. Please email directly.';st.classList.add('error')}).finally(function(){
+                btn.innerHTML='Send Message <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';btn.disabled=false;st.style.display='block';
+            });
+        });
+    });
     </script>
 </body>
 </html>
